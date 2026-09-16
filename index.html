@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Metropolis Snake - Superhero Edition</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="game-container">
+        <!-- Canvas Game -->
+        <canvas id="gameCanvas" width="800" height="600"></canvas>
+
+        <!-- Overlay Menu Start (Ditambahkan onclick langsung) -->
+        <div id="menu-start" class="overlay-card active">
+            <h1>METROPOLIS SNAKE</h1>
+            <h2>SUPERMAN: MASKED EDITION</h2>
+            <p class="controls-desc">WASD / Panah Keyboard / Tombol di Layar</p>
+            <button id="btn-start" class="action-btn" onclick="startGame()">PENCET UNTUK MULAI</button>
+        </div>
+
+        <!-- Overlay Game Over (Ditambahkan onclick langsung) -->
+        <div id="menu-over" class="overlay-card">
+            <h1 class="danger-text">GAME OVER!</h1>
+            <h2 id="final-score">TOTAL SKOR AKHIR: 0 PTS</h2>
+            <button id="btn-restart" class="action-btn" onclick="startGame()">PENCET MAIN ULANG</button>
+        </div>
+
+        <!-- HUD Skor -->
+        <div id="hud-score">
+            SKOR: <span id="score-val">0</span> PTS
+        </div>
+
+        <!-- Tombol Virtual D-Pad Transparan di Layar -->
+        <div id="virtual-dpad">
+            <button class="dpad-btn" id="dpad-up">▲</button>
+            <button class="dpad-btn" id="dpad-left">◄</button>
+            <button class="dpad-btn" id="dpad-down">▼</button>
+            <button class="dpad-btn" id="dpad-right">►</button>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
